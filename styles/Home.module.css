@@ -1,0 +1,345 @@
+.containers {
+  background: #1b2026;
+}
+
+.userHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 71px auto 10px;
+  width: 90%;
+  max-width: 1109px;
+  font-weight: 1000;
+}
+
+.bridgeHeader .userHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.userWalletTitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.walletAddress {
+  color: #fff;
+}
+.bridgeHeader .userHead .userWallet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 197px;
+  height: 58px;
+}
+.walletLogo {
+  width: 21.45px;
+  height: 19.5px;
+  margin-right: 11px;
+}
+.bridgeBody {
+  line-height: normal;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  padding: 0;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  width: 90%;
+  max-width: 1109px;
+}
+.containerBody {
+  line-height: normal;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  width: 540px;
+  height: 820px;
+  background-color: #14181d;
+  margin-bottom: 20px;
+  position: relative;
+  border: solid;
+  border-color: #3b4149;
+  border-radius: 10px;
+  border-width: 1px;
+}
+.containerBody .bodyHeader {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.6px;
+  padding: 16px 0 16px 30px;
+  border-radius: 10px 10px 0 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Montserrat SemiBold', sans-serif;
+  color: hsla(0, 0%, 100%, 0.7);
+  text-align: left;
+  position: relative;
+}
+.containerBody > header {
+  display: flex;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.6px;
+  padding: 16px 0 16px 30px;
+  border-radius: 10px 10px 0 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Montserrat SemiBold', sans-serif;
+  color: hsla(0, 0%, 100%, 0.7);
+  text-align: left;
+  position: relative;
+}
+.containerBody > .currencies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  width: 100%;
+  padding: 0 25.5px 0 28.5px;
+  margin-top: 27.5px;
+  margin-bottom: 10px;
+}
+.containerBody > .pendingTxs {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  height: 22px;
+  padding-left: 28.5px;
+  position: relative;
+  top: -10px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  text-align: left;
+}
+.containerBody > .separator {
+  line-height: normal;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  border: 1px;
+  border-top: 1px solid #3b4149;
+  width: 100%;
+}
+.userLands {
+  line-height: normal;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  margin-top: 27px;
+  padding: 0 25px 35px;
+}
+.userLands > header {
+  display: flex;
+  line-height: normal;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+.userLands > .userNfts {
+  display: flex;
+  padding: 20px;
+  line-height: normal;
+  font-size: 15px;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Montserrat Regular', sans-serif;
+  color: #fff;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: normal;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  height: 500px;
+  background-color: #22262a;
+  padding-bottom: 20px;
+  border: solid;
+  border-color: #282e36;
+  border-radius: 10px;
+  border-width: 0;
+}
+.btnDeposit {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: 400;
+  position: relative;
+  font-family: 'Montserrat Bold', sans-serif;
+  text-transform: capitalize;
+  height: 50px;
+  font-size: 15px;
+  line-height: 19px;
+  border-radius: 20px;
+  text-align: center;
+  padding: unset;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: auto;
+  background-color: #2f3740 !important;
+  border: none !important;
+  color: #40474e !important;
+  min-height: 38px !important;
+  max-height: 38px !important;
+  min-width: 145px !important;
+  max-width: 145px !important;
+}
+.networkIcon {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  --navbar-height: 60px;
+  --tab-menu-height: 50px;
+  --sidebar-left-navigation-width: 90px;
+  letter-spacing: 0.6px;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Montserrat SemiBold', sans-serif;
+  color: hsla(0, 0%, 100%, 0.7);
+  text-align: left;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  max-height: 100%;
+  max-width: 100%;
+  font-style: italic;
+  height: 24px;
+  width: 40px;
+  margin-right: 7.5px;
+  vertical-align: bottom;
+}
+.currencyLogo {
+  width: 22px;
+  height: 22px;
+  margin: 0 8px 0 0;
+}
+.userWalletAddress {
+  display: flex;
+}
+.currency {
+  display: flex;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #cccc;
+  margin-right: 10px;
+}
+.inventoryList {
+  width: 100%;
+  height: 100%;
+}
+.inventoryList .body{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.selected {
+  border-color: green;
+}

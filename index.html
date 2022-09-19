@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bridge-header .user-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+      }
+      .user-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 71px auto 10px;
+        width: 90%;
+        max-width: 1109px;
+        color: #fff;
+        font-weight: 1000;
+      }
+      .user-wallet-title {
+        font-size: 20px;
+      }
+      .bridge-header .user-head .user-wallet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 197px;
+        height: 58px;
+      }
+      .wallet-logo {
+        width: 21.45px;
+        height: 19.5px;
+        margin-right: 11px;
+      }
+      .bridge-body {
+        line-height: normal;
+        font-size: 15px;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        padding: 0;
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: auto;
+        width: 90%;
+        max-width: 1109px;
+      }
+      .container-body {
+        line-height: normal;
+        font-size: 15px;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        width: 540px;
+        height: 820px;
+        background-color: #14181d;
+        margin-bottom: 20px;
+        position: relative;
+        border: solid;
+        border-color: #3b4149;
+        border-radius: 10px;
+        border-width: 1px;
+      }
+      .container-body .body-header {
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        box-sizing: border-box;
+        margin: 0;
+        font-weight: 400;
+        background-color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.6px;
+        padding: 16px 0 16px 30px;
+        border-radius: 10px 10px 0 0;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: 'Montserrat SemiBold', sans-serif;
+        color: hsla(0, 0%, 100%, 0.7);
+        text-align: left;
+        position: relative;
+      }
+      .container-body > header {
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        box-sizing: border-box;
+        margin: 0;
+        font-weight: 400;
+        background-color: rgba(0, 0, 0, 0.8);
+        letter-spacing: 0.6px;
+        padding: 16px 0 16px 30px;
+        border-radius: 10px 10px 0 0;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: 'Montserrat SemiBold', sans-serif;
+        color: hsla(0, 0%, 100%, 0.7);
+        text-align: left;
+        position: relative;
+      }
+      .container-body > .currencies {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        box-sizing: border-box;
+        margin: 0;
+        font-weight: 400;
+        width: 100%;
+        padding: 0 25.5px 0 28.5px;
+        margin-top: 27.5px;
+        margin-bottom: 10px;
+      }
+      .container-body > .pending-txs {
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        height: 22px;
+        padding-left: 28.5px;
+        position: relative;
+        top: -10px;
+        font-size: 12px;
+        line-height: 15px;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        text-align: left;
+      }
+      .container-body > .separator {
+        line-height: normal;
+        font-size: 15px;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        border: 1px;
+        border-top: 1px solid #3b4149;
+        width: 100%;
+      }
+      .user-lands {
+        line-height: normal;
+        font-size: 15px;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        margin: 0;
+        font-weight: 400;
+        margin-top: 27px;
+        padding: 0 25px 35px;
+      }
+      .user-lands > header {
+        line-height: normal;
+        font-size: 15px;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        margin-bottom: 7px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .user-lands > .user-nfts {
+        line-height: normal;
+        font-size: 15px;
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        font-family: 'Montserrat Regular', sans-serif;
+        color: #fff;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: normal;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        height: 500px;
+        background-color: #22262a;
+        padding-bottom: 20px;
+        border: solid;
+        border-color: #282e36;
+        border-radius: 10px;
+        border-width: 0;
+      }
+      .btn_deposit {
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        box-sizing: border-box;
+        margin: 0;
+        font-weight: 400;
+        position: relative;
+        font-family: 'Montserrat Bold', sans-serif;
+        text-transform: capitalize;
+        height: 50px;
+        font-size: 15px;
+        line-height: 19px;
+        border-radius: 20px;
+        text-align: center;
+        padding: unset;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: auto;
+        background-color: #2f3740 !important;
+        border: none !important;
+        color: #40474e !important;
+        min-height: 38px !important;
+        max-height: 38px !important;
+        min-width: 145px !important;
+        max-width: 145px !important;
+      }
+      .network-icon {
+        text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        --navbar-height: 60px;
+        --tab-menu-height: 50px;
+        --sidebar-left-navigation-width: 90px;
+        letter-spacing: 0.6px;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: 'Montserrat SemiBold', sans-serif;
+        color: hsla(0, 0%, 100%, 0.7);
+        text-align: left;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        max-height: 100%;
+        max-width: 100%;
+        font-style: italic;
+        height: 24px;
+        width: 40px;
+        margin-right: 7.5px;
+        vertical-align: bottom;
+      }
+      .currency-logo {
+        width: 22px;
+        height: 22px;
+        margin: 0 8px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="user-head">
+      <div class="user-wallet">
+        <p class="user-wallet-title">My balance</p>
+        <p class="user-wallet-address">
+          <img src="https://www.sandbox.game/img/09_User_Profile/builtin.png" alt="wallet-logo" class="wallet-logo" />
+          <span class="wallet-address">0x0d35...7e7d89e</span>
+        </p>
+      </div>
+      <div class="transaction-history-access">
+        <button data-v-54450d76="" color="primary" type="button" class="transaction-history-button outlined">
+          connect
+        </button>
+      </div>
+    </div>
+    <div class="bridge-body">
+      <!---->
+      <!---->
+      <div class="container-body">
+        <header class="body-header">
+          <img
+            src="https://www.sandbox.game/img/32_Bridge/layer1-ether.svg"
+            alt="sand-ether-icon"
+            class="network-icon"
+          />
+          Ethereum
+        </header>
+        <div class="currencies">
+          <div class="currency">
+            <img src="https://www.sandbox.game/img/32_Bridge/layer1-ether.svg" alt="eth-logo" class="currency-logo" />
+            <div class="currency-balances">
+              <p class="currency-value">0.07 ETH</p>
+            </div>
+          </div>
+          <div class="currency"></div>
+          <div class="currency-ctas">
+            <button
+              data-v-54450d76=""
+              color="primary"
+              type="button"
+              disabled="disabled"
+              class="disabled xsmall btn_deposit"
+            >
+              Deposit
+            </button>
+          </div>
+        </div>
+        <p class="pending-txs"><!----></p>
+        <hr class="separator" />
+        <div class="user-lands">
+          <header>
+            <p class="nfts-network">NFTs on Ethereum</p>
+            <button
+              data-v-54450d76=""
+              color="primary"
+              type="button"
+              disabled="disabled"
+              class="disabled xsmall btn_deposit"
+            >
+              Mint
+            </button>
+          </header>
+          <div class="user-nfts">
+            <!---->
+            <div data-v-d33ee34a="" class="inventory-list">
+              <div data-v-d33ee34a="" class="body"><!----></div>
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-body">
+        <header>
+          <img
+            src="https://www.sandbox.game/img/32_Bridge/layer2-polygon.svg"
+            alt="msand-matic-icon"
+            class="network-icon"
+          />
+          Polygon
+        </header>
+        <div class="currencies">
+          <div class="currency">
+            <img src="https://www.sandbox.game/img/32_Bridge/layer2-polygon.svg" alt="eth-logo" class="currency-logo" />
+            <div class="currency-balances">
+              <p class="currency-value is-color-polygon">0.53 MATIC</p>
+            </div>
+          </div>
+          <div class="currency"></div>
+          <div class="currency-ctas">
+            <button color="primary" type="button" class="btn_deposit xsmall">Withdraw</button>
+          </div>
+        </div>
+        <div class="pending-txs">
+          <!---->
+          <!---->
+        </div>
+        <hr class="separator" />
+        <div class="user-lands">
+          <header>
+            <p class="nfts-network">NFTs on Polygon</p>
+          </header>
+
+          <div class="user-nfts">
+            <!---->
+            <div data-v-d33ee34a="" class="inventory-list">
+              <div data-v-d33ee34a="" class="body"><!----></div>
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </body>
+</html>
+<script>
+  function _calcTokenIdFromEvent() {
+    let datas = {
+      status: '1',
+      message: 'OK',
+      result: [
+        {
+          blockNumber: '11298195',
+          timeStamp: '1661940449',
+          hash: '0xc79a9dca6747215e43137a590fa8fae2ca110c1d9bddc2dae6dfe579f19164b8',
+          nonce: '209',
+          blockHash: '0x22394b90a569619a4c6138d8a54f12183937608d08826c850d6e4a4cc93bc763',
+          from: '0x0000000000000000000000000000000000000000',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          tokenID: '1',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '36',
+          gas: '215550',
+          gasPrice: '1000000010',
+          gasUsed: '143700',
+          cumulativeGasUsed: '10545079',
+          input: 'deprecated',
+          confirmations: '33195',
+        },
+        {
+          blockNumber: '11298230',
+          timeStamp: '1661940976',
+          hash: '0xad52d343d586c389f6d5cf392100abcdf936489a1d6792fb52f264852e62a17d',
+          nonce: '212',
+          blockHash: '0x615f50f8f3c840b4adf99ae4f263acca063f244f9903bfadd794aa9eb60b62ea',
+          from: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x3ec6834fa9815f009c13686d1d1676cd4de1242f',
+          tokenID: '1',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '30',
+          gas: '292203',
+          gasPrice: '1000000014',
+          gasUsed: '177420',
+          cumulativeGasUsed: '11607143',
+          input: 'deprecated',
+          confirmations: '33160',
+        },
+        {
+          blockNumber: '11298333',
+          timeStamp: '1661942524',
+          hash: '0x4f97ef980a6c2edca5c14ab25508ac1f1bb8bfd72a3fe1c9ed0c766dc7a54385',
+          nonce: '388',
+          blockHash: '0x2e1fe353dfbaa06cf899d86accaf4d35d20242d6d4e931a685f34f799d69b805',
+          from: '0x3ec6834fa9815f009c13686d1d1676cd4de1242f',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          tokenID: '1',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '25',
+          gas: '315909',
+          gasPrice: '1210000016',
+          gasUsed: '192662',
+          cumulativeGasUsed: '10321347',
+          input: 'deprecated',
+          confirmations: '33057',
+        },
+        {
+          blockNumber: '11315429',
+          timeStamp: '1662199823',
+          hash: '0x62f0aded736982b34cbb93d8518e55156ea590949e7b2ac9e0f77928d9833457',
+          nonce: '225',
+          blockHash: '0x1ec3e9e9e28b8b668695c630b23dd6235980156e9038bf3fed38d71112bb597e',
+          from: '0x0000000000000000000000000000000000000000',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          tokenID: '10',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '7',
+          gas: '223950',
+          gasPrice: '1000000008',
+          gasUsed: '149300',
+          cumulativeGasUsed: '1284880',
+          input: 'deprecated',
+          confirmations: '15961',
+        },
+        {
+          blockNumber: '11331361',
+          timeStamp: '1662442174',
+          hash: '0xc865a55a25b34bcebd2a3ee20f907c1e0b3bcdf9c4bf0838149817695f690c22',
+          nonce: '232',
+          blockHash: '0xef232a7b3e59ba0ed560153ee351fd4de2c2b832a09f0a3de24c4ac47bc27b1c',
+          from: '0x0000000000000000000000000000000000000000',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          tokenID: '11',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '20',
+          gas: '223950',
+          gasPrice: '1000000008',
+          gasUsed: '149300',
+          cumulativeGasUsed: '7224593',
+          input: 'deprecated',
+          confirmations: '29',
+        },
+        {
+          blockNumber: '11331369',
+          timeStamp: '1662442294',
+          hash: '0xcd72aca3ee8633f0fc15fcefc699533e6f9ee68fa19c46069bba65a86a32f694',
+          nonce: '233',
+          blockHash: '0xd574f84edf27aa8eb379c0856536e9fcffb9598ee8bdc88dce56062dd901bff1',
+          from: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x597582b7965b374f4f501cc2e2750fb30080bd27',
+          tokenID: '1',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '15',
+          gas: '163365',
+          gasPrice: '1000000008',
+          gasUsed: '99310',
+          cumulativeGasUsed: '2224767',
+          input: 'deprecated',
+          confirmations: '21',
+        },
+        {
+          blockNumber: '11331384',
+          timeStamp: '1662442519',
+          hash: '0x174bde4960773960ca1eb72d0ca553f55e3bb5b92781995386fcdab39e77e20f',
+          nonce: '0',
+          blockHash: '0x6fd27197a24f1cfb3a6134f3fe1baa53234e4105077f86a85beb9827b838605e',
+          from: '0x597582b7965b374f4f501cc2e2750fb30080bd27',
+          contractAddress: '0xcf5439e721c10cfa4b72e3462de1be8e2f1db537',
+          to: '0x3375adff5dfe178340e08803aabb2d4d25636860',
+          tokenID: '12',
+          tokenName: 'MainnetTestERC721',
+          tokenSymbol: 'MT721',
+          tokenDecimal: '0',
+          transactionIndex: '18',
+          gas: '124738',
+          gasPrice: '1000000008',
+          gasUsed: '78359',
+          cumulativeGasUsed: '9309672',
+          input: 'deprecated',
+          confirmations: '6',
+        },
+      ],
+    }
+    let result = datas.result
+    let _set = new Set()
+    result.forEach((item) => {
+      if (item.from == '0x0000000000000000000000000000000000000000') {
+        _set.add(item.tokenID)
+      }
+      if (item.to == '0x3375adff5dfe178340e08803aabb2d4d25636860') {
+        _set.add(item.tokenID)
+      }
+    })
+    result.forEach((item) => {
+      if (item.from == '0x3375adff5dfe178340e08803aabb2d4d25636860') {
+        if (_set.has(item.tokenID)) {
+          _set.delete(item.tokenID)
+        }
+      }
+    })
+
+    console.log(_set)
+  }
+  _calcTokenIdFromEvent()
+</script>
